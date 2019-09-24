@@ -1,5 +1,7 @@
 <template>
-  <div class="box2">222</div>
+  <el-card class="box2">
+    222
+  </el-card>
 </template>
 
 <script>
