@@ -6,7 +6,7 @@
         <c-nav />
       </el-header>
       <el-container class="contauner">
-        <el-aside width="300px">
+        <el-aside width="296px">
           <!-- 左边导航 -->
           <c-aside />
         </el-aside>
@@ -47,5 +47,11 @@ export default {
 .contauner{
   max-width: 1640px;
   margin: 38px auto 0;
+  .el-aside{
+    margin-right: 100px;
+  }
+  .el-main{
+    padding: 0;
+  }
 }
 </style>

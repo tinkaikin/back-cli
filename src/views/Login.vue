@@ -56,9 +56,9 @@ export default {
       if (value === '') {
         callback(new Error('请输入手机号或邮箱'))
       } else {
-        // if (this.ruleForm.checkPass !== '') {
-        //   this.$refs.ruleForm.validateField('checkPass')
-        // }
+        if (this.ruleForm.phoneOrEmail !== '') {
+          this.$refs.ruleForm.validateField('phoneOrEmail')
+        }
         callback()
       }
     }
