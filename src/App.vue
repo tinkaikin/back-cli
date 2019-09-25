@@ -7,5 +7,6 @@
 <style lang="less">
 *{
   font-size: 14px;
+  text-decoration: none;
 }
 </style>
