@@ -5,8 +5,8 @@
         <!-- 顶部导航 -->
         <c-nav />
       </el-header>
-      <el-container>
-        <el-aside width="200px">
+      <el-container class="contauner">
+        <el-aside width="300px">
           <!-- 左边导航 -->
           <c-aside />
         </el-aside>
@@ -40,10 +40,12 @@ export default {
   width: 100%;
   height: 100%;
 }
-// .el-header {
-//   background-color: red;
-// }
 .el-container {
+  width: 100%;
   height: 100%;
+}
+.contauner{
+  max-width: 1640px;
+  margin: 38px auto 0;
 }
 </style>

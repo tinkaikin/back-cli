@@ -80,5 +80,13 @@ export default {
     // top: 60px;
     // left: 0;
     height:100%;
+    border-right:none;
+    .is-active{
+      background-color: rgba(27,154,238,.1)!important;
+    }
+    .el-menu-item, .el-submenu__title{
+      height: 40px;
+      line-height: 40px;
+    }
 }
 </style>
