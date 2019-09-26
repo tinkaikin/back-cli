@@ -60,6 +60,12 @@ export default {
 
 <style lang="less" scoped>
 .top-nav {
+  position: fixed;
+  z-index: 999;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;

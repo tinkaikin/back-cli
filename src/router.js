@@ -26,7 +26,24 @@ export default new Router({
       path: '/forgot',
       name: 'forgot',
       component: () => import('./views/Forgot')
+    },
+    // 任务页面
+    {
+      path: '/tasks',
+      // name: 'tasks',
+      component: () => import('./views/tasks/layout.vue'),
+      children: [
+        { name: 'task', path: '/task', component: () => import('./views/tasks/view/task/Router-task') },
+        { name: 'all', path: '/all', component: () => import('./views/tasks/view/task/Router-all') }
+        // { name: 'today', path: '/today', component: () => import('./views/tasks/view/task/Router-task') },
+        // { name: 'unfinished', path: '/unfinished', component: () => import('./views/tasks/view/task/Router-task') },
+        // { name: 'finished', path: '/finished', component: () => import('./views/tasks/view/task/Router-task') },
+        // { name: 'await', path: '/await', component: () => import('./views/tasks/view/task/Router-task') },
+        // { name: 'performance', path: '/performance', component: () => import('./views/tasks/view/task/Router-task') }
+      ]
     }
+    // 下面可能是不要的
+
     // {
     //   path: '/about',
     //   name: 'about',
