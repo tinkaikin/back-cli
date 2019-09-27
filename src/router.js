@@ -17,17 +17,19 @@ export default new Router({
         { name: '2', path: '/2', component: () => import('./views/main2/index.vue') }
       ]
     },
+    // 登录页
     {
       path: '/login',
       name: 'login',
       component: () => import('./views/Login')
     },
+    // 重置密码页
     {
       path: '/forgot',
       name: 'forgot',
       component: () => import('./views/Forgot')
     },
-    // 任务页面
+    // 任务页
     {
       path: '/tasks',
       // name: 'tasks',

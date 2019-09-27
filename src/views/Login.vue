@@ -11,8 +11,7 @@
             <el-input type="text" autocomplete="off" placeholder="你的手机号或工作邮箱" v-model="ruleForm.phoneOrEmail"></el-input>
           </el-form-item>
           <el-form-item label prop="pass" class="password" >
-            <el-input type="password" placeholder="密码" v-model="ruleForm.pass"></el-input>
-            <i class="el-icon-camera"></i>
+            <el-input type="password" placeholder="密码" v-model="ruleForm.pass" show-password></el-input>
             <span class="forgot-password" @click="forgotPassword">忘记密码？</span>
           </el-form-item>
           <!-- 登录按钮 -->
@@ -56,9 +55,9 @@ export default {
       if (value === '') {
         callback(new Error('请输入手机号或邮箱'))
       } else {
-        if (this.ruleForm.phoneOrEmail !== '') {
-          this.$refs.ruleForm.validateField('phoneOrEmail')
-        }
+        // if (this.ruleForm.phoneOrEmail !== '') {
+        //   this.$refs.ruleForm.validateField('phoneOrEmail')
+        // }
         callback()
       }
     }
@@ -70,10 +69,12 @@ export default {
       }
     }
     return {
+      // 登录的value
       ruleForm: {
-        phoneOrEmail: '',
-        pass: ''
+        phoneOrEmail: '11111111111',
+        pass: '123'
       },
+      // 校验规则
       rules: {
         phoneOrEmail: [{ validator: phoneOrEmail, trigger: 'blur' }],
         pass: [{ validator: validatePass2, trigger: 'blur' }]
@@ -90,7 +91,9 @@ export default {
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
+          // 校验成功 等待请求
           alert('submit!')
+          this.$router.push('./') // 到首页去
         } else {
           console.log('error submit!!')
           return false

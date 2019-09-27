@@ -16,7 +16,7 @@
           <span class="item">我参与的</span>
         </div>
         <div class="box-group">
-          <div class="group__tabs-img code" style='background-image: url("https://mailimg.teambition.com/logos/cover-demo.jpg");'>
+          <div class="group__tabs-img code" @click="goToTasks" style='background-image: url("https://mailimg.teambition.com/logos/cover-demo.jpg");'>
             <div class="project-grid-card__header">
               <div class="project-grid-card__header__top">
                 <span>示例代码</span>
@@ -199,6 +199,9 @@ export default {
           done()
         })
         .catch(_ => {})
+    },
+    goToTasks () {
+      this.$router.push('/tasks')
     }
   }
 }

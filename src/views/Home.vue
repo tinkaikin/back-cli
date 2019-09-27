@@ -43,10 +43,18 @@ export default {
 .el-container {
   width: 100%;
   height: 100%;
+  .el-header{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 }
 .contauner{
   max-width: 1640px;
-  margin: 38px auto 0;
+  margin: 50px auto 0;
+  padding-top: 40px;
   .el-aside{
     margin-right: 100px;
   }
