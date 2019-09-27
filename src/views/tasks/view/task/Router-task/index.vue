@@ -64,7 +64,7 @@
         </div>
         <div class="workspace__item-center">
           <!-- 一个小模块 -->
-          <div class="task-card-body">
+          <div class="task-card-body" @click.stop="handleDialog">
             <el-checkbox >这是分配给同伴的任务</el-checkbox>
             <!-- 普通颜色 -->
             <div class="hoverColor"></div>
@@ -89,7 +89,7 @@
         </div>
         <div class="workspace__item-center">
           <!-- 一个小模块 -->
-          <div class="task-card-body">
+          <div class="task-card-body" @click.stop="handleDialog">
             <el-checkbox >橙色表示：紧急的任务</el-checkbox>
             <!-- 普通颜色 -->
             <!-- <div class="hoverColor"></div> -->
@@ -99,7 +99,7 @@
             <!-- <div class="hoverColor warningColor"></div> -->
           </div>
           <!-- 一个小模块 -->
-          <div class="task-card-body">
+          <div class="task-card-body" @click.stop="handleDialog">
             <el-checkbox >红色表示：非常紧急的任务</el-checkbox>
             <!-- 普通颜色 -->
             <!-- <div class="hoverColor"></div> -->
@@ -109,7 +109,7 @@
             <div class="hoverColor warningColor"></div>
           </div>
           <!-- 截至的模块 -->
-          <div class="task-card-body">
+          <div class="task-card-body" @click.stop="handleDialog">
             <el-checkbox >这条任务已经逾期了</el-checkbox>
             <!-- 普通颜色 -->
             <div class="hoverColor"></div>
@@ -129,12 +129,31 @@
       </div>
       <div class="workspace__item">3</div>
     </div>
+    <add-task :dialogVisible='dialogVisible' @dialogVisible='callback'></add-task>
   </div>
 </template>
 
 <script>
+import addTask from '../components/addTask'
 export default {
-
+  components: {
+    addTask
+  },
+  data () {
+    return {
+      dialogVisible: false
+    }
+  },
+  methods: {
+    // 弹出任务详情框
+    handleDialog () {
+      this.dialogVisible = true
+    },
+    // 接收到关闭弹出框
+    callback (value) {
+      this.dialogVisible = value
+    }
+  }
 }
 </script>
 

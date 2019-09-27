@@ -4,7 +4,7 @@ import Home from './views/Home.vue'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   // mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -32,11 +32,11 @@ export default new Router({
     // 任务页
     {
       path: '/tasks',
-      // name: 'tasks',
       component: () => import('./views/tasks/layout.vue'),
       children: [
-        { name: 'task', path: '/task', component: () => import('./views/tasks/view/task/Router-task') },
-        { name: 'all', path: '/all', component: () => import('./views/tasks/view/task/Router-all') }
+        { name: 'task', path: '/tasks/task', component: () => import('./views/tasks/view/task/Router-task') },
+        { name: 'all', path: '/tasks/all', component: () => import('./views/tasks/view/task/Router-all') }
+        // 有更多的路由切换的时候使用
         // { name: 'today', path: '/today', component: () => import('./views/tasks/view/task/Router-task') },
         // { name: 'unfinished', path: '/unfinished', component: () => import('./views/tasks/view/task/Router-task') },
         // { name: 'finished', path: '/finished', component: () => import('./views/tasks/view/task/Router-task') },
@@ -44,12 +44,13 @@ export default new Router({
         // { name: 'performance', path: '/performance', component: () => import('./views/tasks/view/task/Router-task') }
       ]
     }
-    // 下面可能是不要的
-
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    // }
   ]
 })
+// 路由过滤
+router.beforeEach((to, from, next) => {
+  if (to.path === '/login') return next()
+  // 这里做判断
+  next()
+})
+
+export default router

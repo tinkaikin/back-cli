@@ -4,7 +4,7 @@
     <el-aside :width="isCollapse? '300px':'0'">
       <el-menu
         router
-        default-active="/task"
+        default-active="/tasks/task"
         class="el-menu-vertical-demo"
         @open="handleOpen"
         @close="handleClose"
@@ -16,7 +16,7 @@
           <span>任务分组</span>
           <i class="el-icon-plus"></i>
         </div>
-        <el-menu-item index="/task">
+        <el-menu-item index="/tasks/task">
           <div>
             <span slot="title">任务 . 1/6</span>
           </div>
@@ -40,7 +40,7 @@
           <i class="el-icon-plus"></i>
         </div>
         <!-- 跳转所有任务 -->
-        <el-menu-item index="/all">
+        <el-menu-item index="/tasks/all">
           <div>
             <i class="el-icon-document"></i>
             <span slot="title">所有任务</span>
@@ -52,7 +52,7 @@
           </div>
         </el-menu-item>
         <!-- 跳转今天的任务 -->
-        <el-menu-item index="/today">
+        <el-menu-item index="/tasks/today">
           <div>
             <i class="el-icon-setting"></i>
             <span slot="title">今天的任务</span>
@@ -64,7 +64,7 @@
           </div>
         </el-menu-item>
         <!-- 跳转未完成的任务 -->
-        <el-menu-item index="/unfinished">
+        <el-menu-item index="/tasks/unfinished">
           <div>
             <i class="el-icon-full-screen"></i>
             <span slot="title">未完成的任务</span>
@@ -76,7 +76,7 @@
           </div>
         </el-menu-item>
         <!-- 跳转已完成的任务 -->
-        <el-menu-item index="/finished">
+        <el-menu-item index="/tasks/finished">
           <div>
             <i class="el-icon-copy-document"></i>
             <span slot="title">已完成的任务</span>
@@ -88,7 +88,7 @@
           </div>
         </el-menu-item>
         <!-- 跳转待认领的任务 -->
-        <el-menu-item index="/await">
+        <el-menu-item index="/tasks/await">
           <div>
             <i class="el-icon-user"></i>
             <span slot="title">待认领的任务</span>
@@ -100,7 +100,7 @@
           </div>
         </el-menu-item>
         <!-- 跳转我执行的任务 -->
-        <el-menu-item index="/performance">
+        <el-menu-item index="/tasks/performance">
           <div>
             <i class="el-icon-star-off"></i>
             <span slot="title">我执行的任务</span>
