@@ -14,6 +14,7 @@ const router = new Router({
       component: Home,
       children: [
         { name: '1', path: '/', component: () => import('./views/main1/index.vue') },
+        { name: '概况', path: '/dashboard', component: () => import('./views/dashboard/index.vue') },
         { name: '2', path: '/2', component: () => import('./views/main2/index.vue') }
       ]
     },
@@ -34,7 +35,7 @@ const router = new Router({
       path: '/tasks',
       component: () => import('./views/tasks/layout.vue'),
       children: [
-        { name: 'task', path: '/tasks/task', component: () => import('./views/tasks/view/task/Router-task') },
+        { name: 'task', path: '/tasks', component: () => import('./views/tasks/view/task/Router-task') },
         { name: 'all', path: '/tasks/all', component: () => import('./views/tasks/view/task/Router-all') }
         // 有更多的路由切换的时候使用
         // { name: 'today', path: '/today', component: () => import('./views/tasks/view/task/Router-task') },

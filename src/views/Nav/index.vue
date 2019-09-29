@@ -1,7 +1,9 @@
 <template>
   <div class="top-nav">
     <!-- 左边 -->
-    <div class="top-nav__log">放置log</div>
+    <div class="top-nav__log">
+      <router-link to="/">放置log</router-link>
+    </div>
     <!-- 中间搜索框 -->
     <div class="top-nav__seatch">
       <div class="search-bar-mask" v-show="!isInputChage" @click="isInputChage=!isInputChage">
@@ -10,7 +12,7 @@
       </div>
        <div class="search-bar-mask select-input" v-show="isInputChage">
         <span class="el-icon-search"></span>
-        <!-- 要添加一个 属性获取聚焦 根据  isInputChage 的值来添加-->
+        <!-- 要添加一个 属性获取聚焦 根据  isInputChange 的值来添加-->
         <input type="text" class="top-nav__input" placeholder="搜索 小明的企业" @blur="isInputChage=!isInputChage">
       </div>
 

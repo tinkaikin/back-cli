@@ -8,7 +8,7 @@
         <div class="task-left">
             <div class="task-left__title">
                 <div>
-                    <el-input v-model="input" placeholder="请输入内容"></el-input>
+                    <el-input placeholder="请输入内容"></el-input>
                 </div>
             </div>
             <div class="component-mount">

@@ -1,7 +1,7 @@
 <template>
   <el-menu
       router
-      default-active="/"
+      default-active="/dashboard"
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
@@ -9,6 +9,10 @@
       text-color="#262626"
       active-text-color="#1b9aee"
     >
+      <el-menu-item index="/dashboard">
+        <i class="el-icon-menu"></i>
+        <span slot="title">概况</span>
+      </el-menu-item>
       <el-menu-item index="/">
         <i class="el-icon-menu"></i>
         <span slot="title">我的星标</span>

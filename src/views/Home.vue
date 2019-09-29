@@ -1,10 +1,7 @@
 <template>
   <div class="home">
-    <el-container>
-      <el-header>
-        <!-- 顶部导航 -->
-        <c-nav />
-      </el-header>
+      <!-- 顶部导航 -->
+      <!-- <c-nav /> -->
       <el-container class="contauner">
         <el-aside width="296px">
           <!-- 左边导航 -->
@@ -15,19 +12,18 @@
           <router-view/>
         </el-main>
       </el-container>
-    </el-container>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import CNav from '@/views/Nav'
+// import CNav from '@/views/Nav'
 import CAside from '@/views/Aside'
 
 export default {
   name: 'home',
   components: {
-    CNav,
+    // CNav,
     CAside
   }
 }
@@ -53,12 +49,13 @@ export default {
 }
 .contauner{
   max-width: 1640px;
-  margin: 50px auto 0;
-  padding-top: 40px;
+  margin: auto;
+  padding-top: 90px;
   .el-aside{
     margin-right: 100px;
   }
   .el-main{
+    min-width: 800px;
     padding: 0;
   }
 }

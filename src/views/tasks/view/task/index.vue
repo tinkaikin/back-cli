@@ -4,7 +4,7 @@
     <el-aside :width="isCollapse? '300px':'0'">
       <el-menu
         router
-        default-active="/tasks/task"
+        default-active="/tasks"
         class="el-menu-vertical-demo"
         @open="handleOpen"
         @close="handleClose"
@@ -16,7 +16,7 @@
           <span>任务分组</span>
           <i class="el-icon-plus"></i>
         </div>
-        <el-menu-item index="/tasks/task">
+        <el-menu-item index="/tasks">
           <div>
             <span slot="title">任务 . 1/6</span>
           </div>

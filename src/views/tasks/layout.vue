@@ -1,8 +1,6 @@
 <template>
-  <div class="tasks">
-    <c-nav />
     <!-- 顶部的tabe标签 -->
-    <div class='container'>
+    <div class='tasks-container'>
       <el-tabs v-model="activeName" @tab-click="handleClick">
           <el-tab-pane label="任务" name="first"><c-task /></el-tab-pane>
           <el-tab-pane label="分享" name="second">分享</el-tab-pane>
@@ -64,17 +62,14 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
-import CNav from '@/views/Nav'
 
 import CTask from './view/task' // 任务组件
 import CStatistic from './view/statistic' // 统计组件
 export default {
   components: {
-    CNav,
     CTask,
     CStatistic
   },
@@ -102,7 +97,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.tasks,.container,.el-tabs,
+.tasks,.tasks-container,.el-tabs,
 .el-tabs /deep/ .el-tabs__content,
 .el-tab-pane{
   height: 97%;
@@ -111,10 +106,11 @@ export default {
 .el-tabs /deep/ .el-tabs__nav-scroll{
     padding: 0 20px 0 50px;
 }
-.container{
+.tasks-container{
   position: relative;
-  top: 50px;
+  border-top: 1px solid #e5e5e5;
   background-color: #e5e5e5;
+  height: 100%;
   & /deep/ .el-tabs__content{
     overflow: auto;
   }

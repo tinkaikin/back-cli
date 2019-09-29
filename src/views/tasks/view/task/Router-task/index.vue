@@ -74,9 +74,7 @@
             <!-- <div class="hoverColor warningColor"></div> -->
           </div>
           <!-- 添加的模块 -->
-          <div class="task-card-body add">
-            <i class="el-icon-plus"></i>
-          </div>
+          <plus-task />
         </div>
       </div>
       <div class="workspace__item">
@@ -122,9 +120,7 @@
             </div>
           </div>
           <!-- 添加的模块 -->
-          <div class="task-card-body add">
-            <i class="el-icon-plus"></i>
-          </div>
+          <plus-task />
         </div>
       </div>
       <div class="workspace__item">3</div>
@@ -135,13 +131,15 @@
 
 <script>
 import addTask from '../components/addTask'
+import plusTask from '../components/plusTask'
 export default {
   components: {
-    addTask
+    addTask,
+    plusTask
   },
   data () {
     return {
-      dialogVisible: false
+      dialogVisible: false // 任务内容弹框
     }
   },
   methods: {
