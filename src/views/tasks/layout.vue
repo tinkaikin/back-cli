@@ -107,6 +107,8 @@ export default {
     padding: 0 20px 0 50px;
 }
 .tasks-container{
+  min-width: 1200px;
+  overflow: auto;
   position: relative;
   border-top: 1px solid #e5e5e5;
   background-color: #e5e5e5;

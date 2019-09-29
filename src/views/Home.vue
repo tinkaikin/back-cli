@@ -55,7 +55,7 @@ export default {
     margin-right: 100px;
   }
   .el-main{
-    min-width: 800px;
+    min-width: 900px;
     padding: 0;
   }
 }

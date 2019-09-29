@@ -11,7 +11,7 @@
           :class="isSwitchHide?'el-icon-view':'el-icon-c-scale-to-original'" data-event_name="实时概况-隐藏按钮"></i>
         </h2>
         <div class="header-action">
-          <a>编辑</a>
+            <sk-edit><a>编辑</a></sk-edit>
         </div>
       </div>
       <div class="box">
@@ -422,9 +422,11 @@
 
 <script>
 import ZnExperience from './components/Zn-experience'
+import SkEdit from './components/Sk-edit'
 export default {
   components: {
-    ZnExperience
+    ZnExperience,
+    SkEdit
   },
   data () {
     return {
@@ -629,7 +631,7 @@ export default {
       }
     }
   }
-// 常用功能E--
+// 常用功能--
   .box__list{
       height: 108px;
       margin: 0 -20px;

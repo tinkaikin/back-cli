@@ -62,6 +62,7 @@ export default {
 
 <style lang="less" scoped>
 .top-nav {
+  min-width: 1200px;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
