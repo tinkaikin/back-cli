@@ -383,7 +383,7 @@ export default {
 // border-bottom: 1px solid #ccc;
 .skEdit-box {
   & /deep/ .el-dialog__header {
-    height: 35px;
+    height: 50px;
     padding-bottom: 0;
     border-bottom: 1px solid #ccc;
     .el-dialog__title {
@@ -429,6 +429,9 @@ export default {
       display: inline-block;
       & /deep/ input {
         height: 30px;
+      }
+      .el-input__icon{
+        line-height: 30px;
       }
     }
   }

@@ -57,6 +57,7 @@ export default {
   .el-main{
     min-width: 900px;
     padding: 0;
+    overflow: none;
   }
 }
 </style>

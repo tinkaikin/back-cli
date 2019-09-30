@@ -14,7 +14,7 @@ const router = new Router({
       component: Home,
       children: [
         { name: '1', path: '/', component: () => import('./views/main1/index.vue') },
-        { name: '概况', path: '/dashboard', component: () => import('./views/dashboard/index.vue') },
+        { name: 'dashboard', path: '/dashboard', component: () => import('./views/dashboard/index.vue') },
         { name: '2', path: '/2', component: () => import('./views/main2/index.vue') }
       ]
     },
@@ -44,6 +44,12 @@ const router = new Router({
         // { name: 'await', path: '/await', component: () => import('./views/tasks/view/task/Router-task') },
         // { name: 'performance', path: '/performance', component: () => import('./views/tasks/view/task/Router-task') }
       ]
+    },
+    // 成员管理页
+    {
+      path: '/organization',
+      name: 'organization',
+      component: () => import('./views/organization')
     }
   ]
 })

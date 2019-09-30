@@ -1,0 +1,185 @@
+// @charsetCod "gb2312";      //如果只在中国境内使用  全世界的是默认 utf-8
+/*
+描述:
+*/
+@bgc:#fff;			  		  // body主体背景颜色 red√
+@font-color:#383838;     	  // 基础字体颜色 blue√
+@body-font-size:14px;  			// 基础字体尺寸√
+@a-color: #333;   	  		  // a连接基础颜色√
+@a-hover:#F60; 				  // a:hover 基础颜色√
+//@h-font-size:12px;   			// h标签 统一字体大小
+@w-width:1200px;    			// pc端 版心宽
+@pc-max-width:1200px;   		// pc端 最大宽度
+@pc-min-width:1000px;   		// pc端 最小宽度
+@max-width:980px;   			// 移动端 最大宽
+@min-width:320px;				// 移动端 最小宽
+@active:#3da8f5;      		  // 默认选中的颜色
+@icon-size:18px;				// 图标 初始字体
+
+/*
+    类名描述
+    .min-max            // 最大=成为版心居中  最小=出现滚动条  满屏高
+    .ellipsis2,.ellipsis3,.ellipsis4,.ellipsis5  // 文本省略 数字表示行数
+    .triangleT,.triangleL,.triangleB,.triangleR  // 伪三角 [triangle加上方位]
+    .fl,.fr,.fn         // 浮动
+    .clearfix           // 清浮动
+    .posr,.posa,posf    // 定位
+    .show,.hide         // 显示和隐藏
+    .b,.n               // 字体重量
+    .f12~.f18           // 字大小(偶数)
+    .txtC,.txtL,.txtR   // 字体位置
+
+*/
+ 
+
+
+/* =s Reset (by YUI 3) */       //删除 样式重置
+*{box-sizing: border-box;}
+html{color:@font-color;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+img{vertical-align:top;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
+input,textarea,select{*font-size:100%;}
+legend{color:#000;}
+/* =e Reset */
+
+/* =s base */             //删除 基本样式设置
+html,body{height:100%;background:@bgc;}
+body{font-family:"Microsoft YaHei",simSun,"Lucida Grande","Lucida Sans Unicode",Arial;line-height:170%;font-size:@body-font-size;color:@font-color;}
+i,em{font-style:normal;}
+a{color:@a-color;text-decoration: none;}
+a:hover{color:@a-hover;}
+a.under:link,a.under:active,a.under:visited,a.under:hover{text-decoration:underline;}
+/* float [flt加方向首个字母] */    //删除 浮动
+.fl{float:left;}
+.fr{float:right;}
+.fn{float:none;}
+/* clearfix */									//清除浮动
+.clearfix:after {content: '';display: block;height: 0;visibility: hidden;clear:both;}
+.clearfix {*zoom:1;}
+ //清除浮动方法2 
+//.clearfix:before,.clearfix:after{content:"";display: table;}
+//.clearfix:after{clear:both;}
+/* position [pos加类型首个字母] */
+.posr{position:relative;}
+.posa{position:absolute;}
+.posf{position:fixed;}
+/* 显示 */
+.show{display:block;}
+.hide{display:none;}
+/* 文本域 */
+.textareaN{resize: none;}
+/* =e base */
+
+/* =s Font */
+/* 字体重量 [首字母]*/
+.b{font-weight:bold;}
+.n{font-weight:normal;}
+/* 字大小 [f加字像素值] */
+.f12{font-size:12px;}
+.f14{font-size:14px;}
+.f16{font-size:16px;}
+.f18{font-size:18px;}
+/* 字体位置 [txt加方位首个字母] */
+.txtC{text-align:center;}
+.txtL{text-align:left;}
+.txtR{text-align:right;}
+/* 垂直位置 [vera加方位首个字母] */
+.veraM{vertical-align:middle;}
+.veraT{vertical-align:top;}
+.veraB{vertical-align:bottom;}
+/* 行距 [l加行距像素值] */
+.l16{line-height:16px;}
+.l18{line-height:18px;}
+.l20{line-height:20px;}
+.l22{line-height:22px;}
+.l24{line-height:24px;}
+.l25{line-height:25px;}
+/* 字缩进 [ti加缩进字数] */
+.ti0{text-indent:0;}
+.ti2{text-indent:2em;}
+/* 字颜色 [color加颜色英文] */
+.colorWhite{color:#fff;}
+.colorBlack{color:#000;}
+.colorRed{color:red;}
+.colorBlue{color:blue;}
+.colorOrange{color:#F30;}
+.colorBrown{color:brown;}
+.colorGreen{color:green;}
+.colorGray{color:gray;}
+.colorYellow{color:#FC0;}
+/* 链接 [link加颜色英文] */     //删除 这个没用到
+a.linkWhite:link,a.linkWhite:active,a.linkWhite:visited{color:#fff;}
+// a.linkWhite:hover{}
+a.linkBlack:link,a.linkBlack:active,a.linkBlack:visited{color:#000;}
+// a.linkBlack:hover{}
+a.linkRed:link,a.linkRed:active,a.linkRed:visited{color:red;}
+// a.linkRed:hover{}
+a.linkBlue:link,a.linkBlue:active,a.linkBlue:visited{color:blue;}
+// a.linkBlue:hover{}
+a.linkOrange:link,a.linkOrange:active,a.linkOrange:visited{color:#F30;}
+// a.linkOrange:hover{}
+/* =e Font */
+ 
+/* =s Skill */   							//删除 小技巧
+/* 文本省略 [ellipsis加上行数] 2~兼容弹性盒子*/  
+.ellipsis2,.ellipsis3,.ellipsis4,.ellipsis5{overflow:hidden;word-break:break-all;text-overflow:ellipsis;-webkit-box-orient:vertical;display:-webkit-box;}
+.ellipsis1{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.ellipsis2{-webkit-line-clamp:2;}
+.ellipsis3{-webkit-line-clamp:3;}
+.ellipsis4{-webkit-line-clamp:4;}
+.ellipsis5{-webkit-line-clamp:5;}
+/* 伪三角 [triangle加上方位] */
+.triangleT,.triangleL,.triangleB,.triangleR{position:relative;}
+.triangleT::after,
+.triangleL::after,
+.triangleB::after,
+.triangleR::after
+{content:"";position:absolute;width:0;height:0;top:0;left:0;border-color:transparent;border-style:solid;}
+.triangleB::after{border-bottom-color: red;border-width:10px;}
+.triangleR::after{border-right-color: blue;border-width:10px;}
+.triangleT::after{border-top-color: green;border-width:10px;}
+.triangleL::after{border-left-color: yellow;border-width:10px;}
+/* =e Skill */ 
+
+/* =s layout */     //删除 布局相关的
+/* 顶部导航 */
+#NIE-topBar{height:55px;background-color:#fff;}
+/* 外套 */
+// #wrap{position:relative;width:100%;max-width:1920px;min-width:1000px;_width:expression((document.documentElement.clientWidth>1920||document.body.clientWidth>1920)?"1920px":((document.documentElement.clientWidth<1000||document.body.clientWidth<1000)?"1000px":"100%"));height:auto;overflow:hidden;margin:0 auto;}
+/* 外套背景图 */
+#wrap-bg1,#wrap-bg2,#wrap-bg3{width:1200px;float:left;}
+// #wrap-bg1{}
+// #wrap-bg2{}
+// #wrap-bg3{}
+/* 主体 */
+.min-max{min-width: @pc-min-width;max-width: @pc-max-width;margin: 0 auto;position: absolute;top:0;left: 0;right: 0;height: 100%;}
+/* 页眉 */
+// #header{}
+/* 中心 */
+// #center{}
+/* 页脚 */
+#footer{text-align:center;clear:both;}
+#footer,#footer a{color:#000;text-decoration:none;}
+#footer a:hover{text-decoration:underline;}
+/* nie 底部版权(共3行）*/
+#NIE-copyRight{text-align:center;}
+#NIE-copyRight a{text-decoration:none;}
+#NIE-copyRight .l1{padding-bottom:10px;}
+// #NIE-copyRight .l2{}
+// #NIE-copyRight .l3{}
+/* 底部代码（隐藏） */
+#botCode{display:none;}
+/* =e layout */
+
+

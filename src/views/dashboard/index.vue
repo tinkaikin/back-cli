@@ -385,7 +385,7 @@
           常用功能
         </h2>
         <div class="header-action">
-          <a>编辑</a>
+          <cy-edit><a>编辑</a></cy-edit>
         </div>
       </div>
       <div class="box">
@@ -422,11 +422,13 @@
 
 <script>
 import ZnExperience from './components/Zn-experience'
-import SkEdit from './components/Sk-edit'
+import SkEdit from './components/Sk-edit' // 实时概况的编辑弹框
+import CyEdit from './components/Cy-edit' // 常用功能的编辑弹框
 export default {
   components: {
     ZnExperience,
-    SkEdit
+    SkEdit,
+    CyEdit
   },
   data () {
     return {

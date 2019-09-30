@@ -7,6 +7,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 // 导入全局样式
 import './style/index.less'
+import './style/base.less'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
