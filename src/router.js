@@ -49,7 +49,13 @@ const router = new Router({
     {
       path: '/organization',
       name: 'organization',
-      component: () => import('./views/organization')
+      component: () => import('./views/organization'),
+      children: [
+        {
+          path: '/organization',
+          component: () => import('./views/organization/main-router/all-member.vue') // 所有成员 后面还有其他的
+        }
+      ]
     }
   ]
 })

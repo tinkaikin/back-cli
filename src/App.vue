@@ -2,7 +2,9 @@
   <div id="app">
     <!-- 顶部导航 -->
     <c-nav />
-    <router-view />
+    <div id="main">
+      <router-view />
+    </div>
   </div>
 </template>
 <script>
@@ -14,6 +16,14 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
+  @pc-min-width:1200px; // pc端 最小宽度
+  #app{
+    min-width: @pc-min-width;
+    width: 100%;
+  }
+  #main{
+    height: 100%;
+  }
 
 </style>

@@ -1,8 +1,9 @@
 <template>
   <div class="top-nav">
     <!-- 左边 -->
-    <div class="top-nav__log">
-      <router-link to="/">放置log</router-link>
+    <div class="top-nav__log flex_row">
+        <router-link to="/">放置log</router-link>
+        <router-link to="/organization">成员管理</router-link>
     </div>
     <!-- 中间搜索框 -->
     <div class="top-nav__seatch">
@@ -62,6 +63,10 @@ export default {
 
 <style lang="less" scoped>
 .top-nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   min-width: 1200px;
   background-color: #fff;
   display: flex;
@@ -70,8 +75,12 @@ export default {
   padding: 0 16px;
   height: 48px;
   box-shadow: 0px 0px 10px #ccc;
+  z-index: 999;
+  overflow: auto;
   &__log {
-    width: 100px;
+    .router-link{
+      margin-right: 10px;
+    }
   }
   &__seatch {
     position: relative;
